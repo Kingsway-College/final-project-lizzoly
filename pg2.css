@@ -1,0 +1,85 @@
+Header {
+    background-color: #ff7b9cff;
+    text-align: center;
+    color: #f5f5f5ff;
+    font-family: "Emilys Candy", serif;
+   background-image: linear-gradient(rgb(255, 173, 194), rgb(231, 108, 139));
+    border: medium dotted rgb(193, 35, 75);
+    border-radius: 50px;
+}
+img {
+    height: 300px;
+    width: 270px;
+    float: left;
+    margin: 10px;
+    border: medium dotted rgb(206, 46, 86);
+}
+#donut {
+    background-image: linear-gradient(#ff7b9cff,rgb(249, 70, 115));
+    display:flex;
+    padding: 20px 0px;
+    justify-content: space-evenly;
+    position: sticky;
+    border: medium dotted rgb(206, 46, 86);
+}
+.toy {
+    background-color: rgb(210, 64, 101);
+    padding: 2px 5px;
+    text-decoration: none;
+    color: #e8e9edff;
+    border-radius: 5px;
+    height: 18px;
+}
+  h1 {
+  font-family: "Kavoon", serif;
+  font-weight: 400;
+  font-style: normal;
+text-align: center;
+color:#e8e9edff;
+}
+a:link {
+    color: #e8e9edff;
+}
+a:visited {
+    color:rgb(150, 150, 150);
+}
+a:hover {
+    color: rgb(222, 40, 140);
+}
+a:active {
+    color: black;
+}
+Footer {
+background-image: linear-gradient(#ff7b9cff,rgb(249, 70, 115));
+border: medium dotted rgb(206, 46, 86);
+color: #e8e9edff;
+font-family: "Delicious Handrawn";
+}
+h2 {
+    color: #ff7b9cff;
+    text-align: center;
+    font-size: 50px;
+    margin: 50px;
+    font-family: "Kavoon", serif;
+}
+p {
+    color: #feebf4ff;
+    font-family: "Delicious Handrawn", serif;
+    font-size: x-large;
+    width: 800px;
+    margin: 10px;
+}
+li {
+    margin: 5px;
+    color: #feebf4ff;
+    font-family: "Delicious Handrawn", serif;
+    font-size:x-large
+}
+body {
+    height: 100svh;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 12% 2fr 9fr 2fr;
+    background-color: rgb(255, 168, 190);
+    word-spacing: 5px; 
+}
