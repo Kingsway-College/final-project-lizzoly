@@ -1,0 +1,47 @@
+#include "arduino_secrets.h"
+
+#include <Servo.h>
+int distanceThreshold = 0;
+
+int cm = 0;
+
+const int servoPin = 9;
+
+Servo motor;
+
+long readUltrasonicDistance(int triggerPin, int echoPin)
+{
+  pinMode(triggerPin, OUTPUT);  // Clear the trigger
+  digitalWrite(triggerPin, LOW);
+  delayMicroseconds(2);
+  delayMicroseconds(10);
+  digitalWrite(triggerPin, LOW);
+  pinMode(echoPin, INPUT);
+  // Sets the trigger pin to HIGH state for 10 microseconds
+  digitalWrite(triggerPin, HIGH);
+  // Reads the echo pin, and returns the sound wave travel time in microseconds
+  return pulseIn(echoPin, HIGH);
+}
+
+void setup()
+{
+  Serial.begin(9600);
+  motor.attach(servoPin);
+}
+
+void loop()
+{
+    // set threshold distance to activate LEDs
+  distanceThreshold = 5;
+  // measure the ping time in cm
+  cm = 0.01723 * readUltrasonicDistance(7, 6);
+    Serial.print(cm);
+  Serial.println("cm, ");
+  if (cm > distanceThreshold) {
+    motor.write(90);
+  }
+  else {
+    motor.write(0);
+  }
+  delay(100); // Wait for 100 millisecond(s)
+}
